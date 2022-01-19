@@ -1,15 +1,14 @@
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
+* {
+  margin: 0;
+  padding: 0;
 }
 
 html {
-  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-h1{
-  color: black;
+h1, h2{
+  color: white;
 }
 
 ul {
@@ -22,6 +21,7 @@ a {
 }
 
 .nav {
+  overflow: hidden;
   display: flex;
   justify-content: flex-end;
   position: fixed;
@@ -30,6 +30,7 @@ a {
   width: 100%;
   background-color: #767676;
 }
+
 .nav-list {
   display: flex;
   margin-right: 2rem;
@@ -37,12 +38,14 @@ a {
 
 .nav-list a {
   display: block;
-  font-size: 2.2rem;
-  padding: 2rem;
+  text-align: center;
+  font-size: 18px;
+  padding: 14px 16px;
 }
 
 .nav-list a:hover {
-  background: black;
+  background: #ddd;
+  color: black;
 }
 
 .welcome-section {
@@ -58,4 +61,12 @@ a {
 
 .welcome-section p{
   color: white;
+}
+
+.project-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #45567d;
 }
