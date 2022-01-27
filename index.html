@@ -117,12 +117,12 @@
 </footer>
 
 <script>
-function download(file, text) {
+function download(file, name) {
 
                //creating an invisible element
                var element = document.createElement('a');
-               element.setAttribute('href');
-               element.setAttribute('download', file);
+               element.setAttribute('href', file);
+               element.setAttribute('download', name);
 
                // Above code is equivalent to
                // <a href="path of file" download="file name">
@@ -141,8 +141,8 @@ function download(file, text) {
                // Generate download of hello.txt
                // file with some content
                var filename = "pdf_files/testPDF.pdf";
-
-               download(filename);
+               var text = "testPDF.pdf";
+               download(filename, text);
            }, false);
 
 </script>
