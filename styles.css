@@ -1,52 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-  font-size: 100%;
+:root {
+  --font-family: "Roboto", sans-serif;
+  --normal-font: 400;
+  --bold-font: 700;
+  --bolder-font: 900;
+  --bg-color: #fcfcfc;
+  --primary-color: #4756df;
+  --secondary-color: #ff7235;
+  --primary-shadow: #8b8eaf;
+  --secondary-shadow: #a17a69;
+  --bottom-margin: 0.5rem;
+  --bottom-margin-2: 1rem;
+  --line-height: 1.7rem;
+  --transition: 0.3s;
 }
 
-h1, h2{
-  color: white;
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
 }
 
 ul {
-  list-style: none;
+  list-style-type: none;
 }
 
 a {
   text-decoration: none;
-  color: white;
+  color: var(--primary-color);
 }
 
-.nav-container {
-  overflow: hidden;
-  display: block;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  background-color: #767676;
+a:hover {
+  color: var(--secondary-color);
 }
 
-.menu {
+nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
   display: flex;
-  margin-right: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 3.5rem;
+  background-color: var(--bg-color);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
 }
 
-.menu a {
-  display: block;
-  text-align: center;
-  font-size: 18px;
-  padding: 14px 16px;
+nav h1 {
+  color: var(--primary-color);
 }
 
-.menu a:hover {
-  background: #ddd;
-  color: black;
+nav a {
+  color: var(--primary-color);
+  transition: var(--transition);
+}
+nav a:hover {
+  color: var(--secondary-color);
+  border-bottom: 2px solid var(--secondary-color);
+}
+
+nav ul {
+  display: flex;
+  gap: 1.9rem;
+}
+
+nav ul li {
+  font-weight: var(--bold-font);
+}
+
+.nav-menu {
+  color: var(--primary-color);
+  font-size: 2rem;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  display: none;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
 }
 
 .welcome-section {
