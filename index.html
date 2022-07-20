@@ -1,150 +1,64 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-  <link rel="stylesheet" href="styles.css">
-  <title>Welcome to LR3 Designs</title>
-  <script src="https://kit.fontawesome.com/47a81354f1.js" crossorigin="anonymous"></script>
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content+"width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Louis Rosario - Instructional Designer and Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/47a81354f1.js" crossorigin="anonymous"></script>
+  </head>
 
 <body>
 <!--Navigation -->
-<header>
-  <nav id="navbar" class="nav">
-      <ul class="nav-list">
+  <header class="header" id="header">
+
+    <nav id="navbar" class="nav-container">
+      <a href="./index.html"><h2>Louis Rosario</h2>
+      </a>
+
+    <div>
+      <ul class="menu">
         <a href="#about">About</a>
         <a href="#projects">My Work</a>
         <a href="#contact">Contact</a>
       </ul>
-  </nav>
-</header>
+    </div>
+    </nav>
+
+  </header>
 
 <!--About -->
-<main>
-  <section id="about" class="welcome-section">
-    <h1>Hi, I'm Louis</h1>
-    <p>a Front-end Developer</p>
-    <input type="button" id="btn" value="Download" />
-  </section>
+  <main>
+    <section id="about" class="welcome-section">
+      <h1>Hi, I'm Louis</h1>
+      <p>an Instructional Designer and Developer</p>
+    </section>
 
 <!--Projects -->
-  <section id="projects" class="project-section">
-    <h2 class="project-section-header">These are some of my projects</h2>
-
-  <div class="project-grid">
-    <a href="https://codepen.io/freeCodeCamp/full/mVEJag" target="_blank" class="project">
-      <img
-        class="project-image"
-        src="https://cdn.freecodecamp.org/testable-projects-fcc/images/map.jpg"
-        alt="project"/>
-      <p class="project-title">
-        <span class="code">&lt;</span>
-        Map Data Across the Globe
-        <span class="code">&#47;&gt;</span>
-      </p>
-    </a>
-
-    <a
-      href="https://codepen.io/freeCodeCamp/full/mVEJag"
-      target="_blank"
-      class="project project-tile">
-      <img
-        class="project-image"
-        src="https://cdn.freecodecamp.org/testable-projects-fcc/images/map.jpg"
-        alt="project"/>
-      <p class="project-title">
-        <span class="code">&lt;</span>
-        Map Data Across the Globe
-        <span class="code">&#47;&gt;</span>
-      </p>
-    </a>
-
-    <a
-      href="https://codepen.io/freeCodeCamp/full/mVEJag"
-      target="_blank"
-      class="project project-tile">
-      <img
-        class="project-image"
-        src="https://cdn.freecodecamp.org/testable-projects-fcc/images/map.jpg"
-        alt="project"/>
-      <p class="project-title">
-        <span class="code">&lt;</span>
-        Map Data Across the Globe
-        <span class="code">&#47;&gt;</span>
-      </p>
-    </a>
-
-    <a
-      href="https://codepen.io/freeCodeCamp/full/mVEJag"
-      target="_blank"
-      class="project project-tile">
-      <img
-        class="project-image"
-        src="https://cdn.freecodecamp.org/testable-projects-fcc/images/map.jpg"
-        alt="project"/>
-      <p class="project-title">
-        <span class="code">&lt;</span>
-        Map Data Across the Globe
-        <span class="code">&#47;&gt;</span>
-      </p>
-    </a>
-    </div>
-  </section>
+    <section id="projects" class="project-section">
+      <h2 class="project-section-header">These are some of my projects</h2>
 
 <!--Contact -->
-  <section id="contact" class="contact-section">
-    <div class="contact-links">
-      <a href="www.twitter.com" target="_blank"> <span class="fab fa-twitter"></span>
-      Twitter</a>
-    </div>
-    <div class="contact-links">
-      <a href="www.github.com" target="_blank"> <span class="fab fa-github"></span>
-      Github</a>
-    </div>
-    <div class="contact-links">
-      <a href="www.freecodecamp.org" target="_blank"> <span class="fab fa-free-code-camp"></span>
-      freeCodeCamp</a>
-    </div>
-    <div class="contact-links">
-      <a href="www.codepen.io" target="_blank"> <span class="fab fa-codepen"></span>
-      Codepen</a>
-    </div>
-  </section>
+      <section id="contact" class="contact-section">
+        <div class="contact-links">
+          <a href="www.twitter.com" target="_blank"> <span class="fab fa-linkedin"></span>LinkedIn</a>
+        </div>
+        <div class="contact-links">
+          <a href="www.github.com" target="_blank"> <span class="fab fa-github"></span>Github</a>
+        </div>
+        <div class="contact-links">
+          <a href="www.codepen.io" target="_blank"> <span class="fab fa-codepen"></span>Codepen</a>
+        </div>
+      </section>
 
-</main>
-<footer>
-  <p>I'm hosted with GitHub Pages.</p>
-</footer>
+  </main>
 
-<script>
-function download(file, name) {
+  <footer>
+    <p>I'm hosted with GitHub Pages.</p>
+  </footer>
 
-               //creating an invisible element
-               var element = document.createElement('a');
-               element.setAttribute('href', file);
-               element.setAttribute('download', name);
+  <script src="myscripts.js"></script>
 
-               // Above code is equivalent to
-               // <a href="path of file" download="file name">
-
-               document.body.appendChild(element);
-
-               //onClick property
-               element.click();
-
-               document.body.removeChild(element);
-           }
-
-           // Start file download.
-           document.getElementById("btn")
-           .addEventListener("click", function() {
-               // Generate download of hello.txt
-               // file with some content
-               var filename = "pdf_files/testPDF.txt";
-               var text = "testPDF.txt";
-               download(filename, text);
-           }, false);
-
-</script>
 </body>
 </html>

@@ -1,10 +1,12 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
+  font-size: 100%;
 }
 
 h1, h2{
@@ -20,30 +22,29 @@ a {
   color: white;
 }
 
-.nav {
+.nav-container {
   overflow: hidden;
-  display: flex;
-  justify-content: flex-end;
-  position: fixed;
+  display: block;
+  position: absolute;
   top: 0px;
   left: 0px;
   width: 100%;
   background-color: #767676;
 }
 
-.nav-list {
+.menu {
   display: flex;
   margin-right: 2rem;
 }
 
-.nav-list a {
+.menu a {
   display: block;
   text-align: center;
   font-size: 18px;
   padding: 14px 16px;
 }
 
-.nav-list a:hover {
+.menu a:hover {
   background: #ddd;
   color: black;
 }
